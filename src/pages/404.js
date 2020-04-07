@@ -5,9 +5,11 @@ import SEO from '../components/seo';
 
 const NotFoundPage = () => (
   <Layout>
+    <img
+      alt="404"
+      src="https://illustatus.herokuapp.com/?title=Oops,%20Page%20not%20found&fill=%234f86ed"
+    />
     <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
   </Layout>
 );
 
