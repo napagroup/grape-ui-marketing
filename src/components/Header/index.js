@@ -20,7 +20,9 @@ const HeaderFlex = styled(Flex)`
 `;
 
 HeaderFlex.defaultProps = {
-  justifyContent: 'space-between',
+  alignItems: 'center',
+  flexDirection: ['column', 'row'],
+  justifyContent: 'center',
   mb: '1px',
   px: [2, 3, 4, 5],
   py: [1, null, 2],
@@ -28,29 +30,32 @@ HeaderFlex.defaultProps = {
 
 const Header = ({ siteTitle }) => (
   <HeaderFlex>
-    <Flex alignItems="center">
-      <Box maxWidth={175}>
-        <Link to={urlRoutes.homePage}>
-          <Image alt={siteTitle} src={logo} />
-        </Link>
-      </Box>
+    <Box maxWidth={175}>
+      <Link to={urlRoutes.homePage}>
+        <Image alt={siteTitle} src={logo} />
+      </Link>
+    </Box>
+    <Flex flex={1} justifyContent={['center', 'space-between']} style={{ boxSizing: 'border-box' }} width={[1, 'auto']}>
       <Link to={urlRoutes.docsPage}>
         <Button color="black">DOCS</Button>
       </Link>
-    </Flex>
-    <Flex alignItems="center">
-      <Box mx={1} px={3}>
-        <Text>v0.9.0</Text>
-      </Box>
-      <Button href={urlRoutes.externalGithub}>
-        <FontAwesomeIcon icon={faGithub} />
-      </Button>
-      <Button href={urlRoutes.externalTwitter}>
-        <FontAwesomeIcon icon={faTwitter} />
-      </Button>
-      <Link to={urlRoutes.docsPage}>
-        <Button color="brandPrimary">Getting Started</Button>
-      </Link>
+      <Box flex={[1, 'none']} />
+      <Flex alignItems="center">
+        <Box mx={1} px={[1, 2, 3]}>
+          <Text>v0.9.0</Text>
+        </Box>
+        <Button href={urlRoutes.externalGithub} pl={[1, 2]} pr={[1, 2]}>
+          <FontAwesomeIcon icon={faGithub} />
+        </Button>
+        <Button href={urlRoutes.externalTwitter} pl={[1, 2]} pr={[1, 2]}>
+          <FontAwesomeIcon icon={faTwitter} />
+        </Button>
+        <Box display={['none', 'block']}>
+          <Link to={urlRoutes.docsPage}>
+            <Button color="brandPrimary">Getting Started</Button>
+          </Link>
+        </Box>
+      </Flex>
     </Flex>
   </HeaderFlex>
 );

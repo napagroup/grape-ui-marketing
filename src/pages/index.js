@@ -26,6 +26,7 @@ const Jumbotron = styled(Flex)`
 `;
 
 Jumbotron.defaultProps = {
+  flexDirection: ['column', 'row'],
   justifyContent: 'center',
   py: [2, 3, 4, 5],
 };
@@ -95,11 +96,11 @@ const IndexPage = () => {
     <Layout>
       <SEO title="grape-ui: react framework built on the best out there" useTitleTemplate={false} />
       <Jumbotron>
-        <Box maxWidth={187.12} mx={[1, 2, 3, 4]}>
+        <Box maxWidth={[93.56, 187.12]} mx={['auto', 2, 3, 4]}>
           <Image alt="grapeui logo" src={logo} />
         </Box>
         <Box maxWidth={500} mx={[1, 2, 3, 4]}>
-          <Box maxWidth={136} my={[1, 2, 3]}>
+          <Box maxWidth={136} mx="auto" my={[1, 2, 3]}>
             <Image alt="grapeui logo" src={logoText} />
           </Box>
           <Paragraph color="white" lead>
@@ -123,6 +124,7 @@ const IndexPage = () => {
       </Jumbotron>
       <Flex
         alignItems="flex-start"
+        flexDirection={['column', 'row']}
         maxWidth={960}
         mx="auto"
         my={[2, 3, 4, 5]}
