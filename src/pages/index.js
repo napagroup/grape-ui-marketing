@@ -93,7 +93,7 @@ const IndexPage = () => {
   }
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="grape-ui: react framework built on the best out there" useTitleTemplate={false} />
       <Jumbotron>
         <Box maxWidth={187.12} mx={[1, 2, 3, 4]}>
           <Image alt="grapeui logo" src={logo} />
@@ -103,7 +103,7 @@ const IndexPage = () => {
             <Image alt="grapeui logo" src={logoText} />
           </Box>
           <Paragraph color="white" lead>
-            The responsive react UI library built upon styled components, styled system, and open source components.
+            The responsive react UI framework built upon styled components, styled system, and open source components.
           </Paragraph>
           <CopyToClipboard onCopy={() => isCopied()} text="npm i grape-ui-react">
             <CallToActionButton>
@@ -133,7 +133,7 @@ const IndexPage = () => {
           <Text>
             <Text fontWeight="bold">Step 1:</Text>
             {' Install '}
-            <GrapeLink href="https://styled-components.com/">styled-components</GrapeLink>
+            <GrapeLink href={urlRoutes.externalStyledComponents}>styled-components</GrapeLink>
             {' via npm'}
           </Text>
           <CodeBlock code={installStepOne} language="bash" />

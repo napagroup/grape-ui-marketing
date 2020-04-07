@@ -12,7 +12,7 @@
 */
 pre[class*="language-"],
 code[class*="language-"] {
-  color: #fafafa;
+  /* color: #fafafa; */
   font-size: 13px;
   text-shadow: none;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -46,8 +46,8 @@ code[class*="language-"]::mozselection {
 pre[class*="language-"] {
   padding: 1em;
   margin: .5em 0;
-  overflow: auto;
-  background: #000000;
+  /* overflow: auto; */
+  background: rgba(0,0,0,0.1);
 }
 :not(pre) > code[class*="language-"] {
   padding: .1em .3em;
@@ -93,7 +93,7 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string {
   color: #f57c00;
-  background: #121212;
+  background: rgba(0,0,0,0.1);
 }
 .token.atrule,
 .token.attr-value,
@@ -121,7 +121,7 @@ pre[class*="language-"] {
 /*********************************************************
 * Line highlighting
 */
-pre[data-line] {
+/* pre[data-line] {
   position: relative;
 }
 pre[class*="language-"] > code[class*="language-"] {
@@ -144,4 +144,4 @@ pre[class*="language-"] > code[class*="language-"] {
 
 .prism-code {
   user-select: all;
-}
+} */

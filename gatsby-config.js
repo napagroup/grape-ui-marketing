@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'grapeui',
-    description: 'The responsive react UI library built upon styled components, styled system, and open source components.Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
+    description: 'The responsive react UI framework built upon styled components, styled system, and open source components.',
     author: '@napagroup',
   },
   plugins: [
@@ -19,13 +19,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'grape-ui',
+        short_name: 'grape-ui',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#FFFFFF',
+        theme_color: '#CB27A8',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/grape-ui-logo-512.png', // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
