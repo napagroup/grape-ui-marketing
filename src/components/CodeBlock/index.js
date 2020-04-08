@@ -6,7 +6,12 @@ import './prism-theme-grape.css';
 const CodeBlock = (props) => {
   const { code, language } = props;
   return (
-    <Highlight {...defaultProps} code={code} language={language} theme={undefined}>
+    <Highlight
+      {...defaultProps}
+      code={code}
+      language={language}
+      theme={undefined}
+    >
       {({
         className,
         getLineProps,

@@ -8,6 +8,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
+import { Box, Flex } from 'grape-ui-react';
 import { ThemeProvider } from 'styled-components';
 import { Reset } from 'styled-reset';
 
@@ -32,10 +33,12 @@ const Layout = ({ children }) => {
   return (
     <>
       <ThemeProvider theme={themeMain}>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <Reset />
-        <main>{children}</main>
-        <Footer />
+        <Flex flexDirection="column" minHeight="100vh">
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <Reset />
+          <Box flex={1}>{children}</Box>
+          <Footer />
+        </Flex>
       </ThemeProvider>
     </>
   );

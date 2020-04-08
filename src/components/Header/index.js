@@ -35,7 +35,12 @@ const Header = ({ siteTitle }) => (
         <Image alt={siteTitle} src={logo} />
       </Link>
     </Box>
-    <Flex flex={1} justifyContent={['center', 'space-between']} style={{ boxSizing: 'border-box' }} width={[1, 'auto']}>
+    <Flex
+      flex={1}
+      justifyContent={['center', 'space-between']}
+      style={{ boxSizing: 'border-box' }}
+      width={[1, 'auto']}
+    >
       <Link to={urlRoutes.docsPage}>
         <Button color="black">DOCS</Button>
       </Link>
