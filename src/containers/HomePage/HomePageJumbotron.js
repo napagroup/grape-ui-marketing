@@ -4,15 +4,14 @@ import {
   Box,
   Button,
   Flex,
-  Image,
   Paragraph,
   Text,
 } from 'grape-ui-react';
 import React, { useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import styled from 'styled-components';
-import logo from '../../images/logo.svg';
-import logoText from '../../images/logo-text.svg';
+import Logo from '../../images/logo.svg';
+import LogoText from '../../images/logo-text.svg';
 
 const Jumbotron = styled(Flex)`
   background-color: #242424;
@@ -47,14 +46,28 @@ const HomePageJumbotron = () => {
   }
   return (
     <Jumbotron>
-      <Box maxWidth={[93.56, 187.12]} mx={['auto', 2, 3, 4]}>
-        <Image alt="grapeui logo" src={logo} />
+      <Box
+        maxWidth={[187.12, '100%', 187.12]}
+        mx={['auto', 2, 3, 4]}
+        p={[null, 3, 0]}
+      >
+        <Logo />
       </Box>
-      <Flex alignItems={['center', 'flex-start']} flexDirection="column" justifyContent="center" maxWidth={500} mx={['auto', 2, 3, 4]}>
+      <Flex
+        alignItems={['center', 'flex-start']}
+        flexDirection="column"
+        justifyContent="center"
+        maxWidth={500}
+        mx={['auto', 2, 3, 4]}
+      >
         <Box maxWidth={136} my={[1, 2, 3]}>
-          <Image alt="grapeui logo" src={logoText} />
+          <LogoText />
         </Box>
-        <Paragraph color="white" lead mx={[1, 0]}>
+        <Paragraph
+          color="white"
+          lead
+          mx={[3, 0]}
+        >
           The responsive react UI framework built upon styled components, styled system, and open source components.
         </Paragraph>
         <CopyToClipboard onCopy={() => isCopied()} text="npm i grape-ui-react">
