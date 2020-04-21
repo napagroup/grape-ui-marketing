@@ -5,14 +5,14 @@ import {
   Box,
   Button,
   Flex,
-  Image,
   Text,
 } from 'grape-ui-react';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
+import Logo from '../../images/grape-ui-header-logo.svg';
 import urlRoutes from '../constants';
-import logo from '../../images/grape-ui-header-logo.svg';
+import packageJson from '../../../package.json';
 
 const HeaderFlex = styled(Flex)`
   border-bottom: 1px solid #CB27A8;
@@ -31,8 +31,8 @@ HeaderFlex.defaultProps = {
 const Header = ({ siteTitle }) => (
   <HeaderFlex>
     <Box maxWidth={175}>
-      <Link to={urlRoutes.homePage}>
-        <Image alt={siteTitle} src={logo} />
+      <Link title={siteTitle} to={urlRoutes.homePage}>
+        <Logo />
       </Link>
     </Box>
     <Flex
@@ -47,7 +47,7 @@ const Header = ({ siteTitle }) => (
       <Box flex={[1, 'none']} />
       <Flex alignItems="center">
         <Box mx={1} px={[1, 2, 3]}>
-          <Text>v0.9.0</Text>
+          <Text>{packageJson.version}</Text>
         </Box>
         <Button href={urlRoutes.externalGithub} pl={[1, 2]} pr={[1, 2]}>
           <FontAwesomeIcon icon={faGithub} />
