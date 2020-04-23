@@ -14,6 +14,7 @@ import { Reset } from 'styled-reset';
 
 import Header from './Header';
 import Footer from './Footer';
+import Loader from './Loader';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -31,7 +32,7 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <>
+    <Loader>
       <ThemeProvider theme={themeMain}>
         <Flex flexDirection="column" minHeight="100vh">
           <Header siteTitle={data.site.siteMetadata.title} />
@@ -40,7 +41,7 @@ const Layout = ({ children }) => {
           <Footer />
         </Flex>
       </ThemeProvider>
-    </>
+    </Loader>
   );
 };
 
