@@ -3,6 +3,7 @@ module.exports = {
     title: 'grapeui',
     description: 'The responsive react UI framework built upon styled components, styled system, and open source components.',
     author: '@napagroup',
+    siteUrl: 'https://grapeui.com/',
   },
   plugins: [
     'gatsby-plugin-eslint',
