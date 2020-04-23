@@ -1,14 +1,12 @@
 import React from 'react';
-
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import PageNotFound from '../images/PageNotFound.svg';
+import '../containers/404/styles.css';
 
 const NotFoundPage = () => (
   <Layout>
-    <img
-      alt="404"
-      src="https://illustatus.herokuapp.com/?title=Oops,%20Page%20not%20found&fill=%840b55ed"
-    />
+    <PageNotFound />
     <SEO title="404: Not found" />
   </Layout>
 );
