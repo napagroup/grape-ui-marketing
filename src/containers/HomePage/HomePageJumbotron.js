@@ -13,11 +13,10 @@ import styled from 'styled-components';
 import Logo from '../../images/logo.svg';
 import LogoText from '../../images/logo-text.svg';
 
-const Jumbotron = styled(Flex)`
-  background-color: #242424;
-`;
+const Jumbotron = styled(Flex)``;
 
 Jumbotron.defaultProps = {
+  background: '#242424',
   flexDirection: ['column', 'row'],
   justifyContent: 'center',
   py: [2, 3, 4, 5],

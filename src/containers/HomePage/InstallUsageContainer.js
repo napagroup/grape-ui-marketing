@@ -11,13 +11,12 @@ import styled from 'styled-components';
 import CodeBlock from '../../components/CodeBlock';
 import urlRoutes from '../../components/constants';
 
-const GrayBox = styled(Box)`
-  background: #fafafa;
-  border-radius: 4px;
-  box-sizing: border-box;
-`;
+const GrayBox = styled(Box)``;
 
 GrayBox.defaultProps = {
+  background: '#fafafa',
+  borderRadius: '4px',
+  boxSizing: 'border-box',
   maxWidth: 480,
   mb: [2, 0],
   mx: 'auto',
