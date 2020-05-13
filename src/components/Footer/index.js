@@ -3,6 +3,16 @@ import React from 'react';
 import styled from 'styled-components';
 import urlRoutes from '../constants';
 
+const FooterFlex = styled(Flex)``;
+
+FooterFlex.defaultProps = {
+  alignItems: 'center',
+  background: '#dbdbdb',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
+  p: [1, 2, 3],
+};
+
 const FooterParagraph = styled(Paragraph)`
   white-space: nowrap;
 `;
@@ -15,7 +25,7 @@ FooterParagraph.defaultProps = {
 };
 
 const Footer = () => (
-  <Flex alignItems="center" flexWrap="wrap" justifyContent="center" p={[1, 2, 3]} style={{ backgroundColor: '#dbdbdb' }}>
+  <FooterFlex>
     <FooterParagraph>
       {'grape-ui created by '}
       <Link href={urlRoutes.externalNapa}>Napa Group LLC</Link>
@@ -31,7 +41,7 @@ const Footer = () => (
       <Link href={urlRoutes.externalGatsby}>Gatsby</Link>
       .
     </FooterParagraph>
-  </Flex>
+  </FooterFlex>
 );
 
 export default Footer;

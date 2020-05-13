@@ -34,10 +34,18 @@ const Layout = ({ children }) => {
   return (
     <Loader>
       <ThemeProvider theme={themeMain}>
-        <Flex flexDirection="column" minHeight="100vh">
+        <Flex
+          flexDirection="column"
+          minHeight="100vh"
+        >
           <Header siteTitle={data.site.siteMetadata.title} />
           <Reset />
-          <Box flex={1}>{children}</Box>
+          <Box
+            flex={1}
+            mt="1px"
+          >
+            {children}
+          </Box>
           <Footer />
         </Flex>
       </ThemeProvider>
