@@ -23,12 +23,12 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
           include: `${__dirname}/src/images`,
-        }
-      }
+        },
+      },
     },
     'gatsby-plugin-sharp',
     {
