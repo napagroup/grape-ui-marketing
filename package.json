@@ -20,7 +20,7 @@
     "gatsby-plugin-sharp": "^2.4.13",
     "gatsby-source-filesystem": "^2.1.56",
     "gatsby-transformer-sharp": "^2.3.19",
-    "grape-ui-react": "^0.11.0",
+    "grape-ui-react": "^0.12.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-copy-to-clipboard": "^5.0.2",
