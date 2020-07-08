@@ -30,7 +30,7 @@ const InstallUsageContainer = () => (
     <Card
       cardBody={(
         <CodeBlock
-          codeString="npm i grape-ui-react"
+          code="npm i grape-ui-react"
           language="bash"
           my="initial"
         />
@@ -57,7 +57,7 @@ const InstallUsageContainer = () => (
       )}
       cardBody={(
         <CodeBlock
-          codeString={usageExample}
+          code={usageExample}
           my="initial"
         />
       )}
